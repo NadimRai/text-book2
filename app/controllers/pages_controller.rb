@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   		redirect_to books_path
   	end
   end
+
+  def dashboard
+  end
 end
