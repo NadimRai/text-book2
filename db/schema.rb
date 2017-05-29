@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529013049) do
+ActiveRecord::Schema.define(version: 20170529073315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20170529013049) do
     t.string "name"
     t.string "author"
     t.text "description"
-    t.decimal "price"
     t.boolean "availability", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170529013049) do
     t.integer "resource_file_size"
     t.datetime "resource_updated_at"
     t.string "slug"
+    t.integer "price"
     t.index ["slug"], name: "index_books_on_slug", unique: true
   end
 
@@ -51,11 +51,11 @@ ActiveRecord::Schema.define(version: 20170529013049) do
   create_table "sales", force: :cascade do |t|
     t.string "buyer_email"
     t.string "seller_email"
-    t.decimal "amount"
     t.string "uuid"
     t.integer "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "amount"
   end
 
   create_table "users", force: :cascade do |t|
