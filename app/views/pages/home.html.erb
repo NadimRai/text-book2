@@ -1,6 +1,9 @@
 <div class="jumbotron">
   <h1>Welcome To Text-Book</h1>
   <p>Largest Text Book Store</p>
-  <%= link_to "Books", books_path, class: 'btn btn-primary btn-lg' %>
-  
+  <%= link_to "Books", books_path, class: 'btn btn-primary btn-lg' %>  
+</div>
+
+<div class="row">
+	<%= render @books %>
 </div>
