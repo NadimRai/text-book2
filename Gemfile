@@ -33,6 +33,7 @@ gem 'cancan', '~> 1.6', '>= 1.6.10'
 gem 'paperclip', '~> 5.1'
 gem 'aws-sdk', '~> 2.9', '>= 2.9.25'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
+gem 'stripe', '~> 2.11'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
